@@ -10,11 +10,11 @@ def calcular_inss(salario_bruto):
     # Calcula a contribuição ao INSS
     contribuição = 0.0
     for faixa, aliquota in faixas:
-        se salario_bruto > faixa:
+        if salario_bruto > faixa:
             contribuição += faixa * aliquota
-        senão:
+        else:
             contribuição += salario_bruto * aliquota
-            quebrar
+            break
 
     # Calcula o salário líquido
     salario_liquido = salario_bruto - contribuição
